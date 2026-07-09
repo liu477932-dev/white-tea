@@ -6,7 +6,7 @@ html {
 }
 
 #about {
-    scroll-margin-top: 10px;
+    scroll-margin-top: 250px;
 }
 #works {
     scroll-margin-top: 250px;
@@ -132,11 +132,23 @@ html, body {
     color: #000000d2;
 }
 .menu a{
-text-decoration: none;
+  color: #333;
+  text-decoration: none;
+  transition: color .3s;
 }
+
 .menu a:visited{
-color: inherit;
+  color: #333;
 }
+
+.menu a:hover{
+  color: #6B8E5B;
+}
+
+
+
+
+
 .biaoti{
     justify-content: center;
     display: flex;
@@ -355,7 +367,7 @@ color: inherit;
 
 .tea-section{
     width:100%; 
-    margin-top: -180px;
+    margin-top: -350px;
    
 }
 .baicha{  
@@ -363,7 +375,6 @@ color: inherit;
     font-size:45px;
     font-weight:500;
     font-family:"Noto Serif JP", serif;
-    padding-bottom: 40px;
 }
 
 
