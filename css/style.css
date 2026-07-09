@@ -6,7 +6,7 @@ html {
 }
 
 #about {
-    scroll-margin-top: 250px;
+    scroll-margin-top: 10px;
 }
 #works {
     scroll-margin-top: 250px;
@@ -29,20 +29,22 @@ html {
 }
 
 
-.colo {
-    position: fixed;          /* 固定背景 */
-    top: 0;               /* 距离顶部 200px */
-    left: 0;                  /* 左对齐 */
-    width: 100%;              /* 宽度铺满 */
+.colo{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
     height:100vh;
-    z-index: -1;              /* 放在后面 */        /* 隐藏超出部分 */
+    z-index:-1;
+    overflow:hidden;
 }
 
-.colo img {
-    width: 100%;              /* 图片宽度铺满 */
-    height: 100%;             /* 图片高度铺满 */
-    object-fit: cover;        /* 保持比例铺满 */        /* 去掉图片底部空白 */
-    display: block;
+.colo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
 }
 
 .hero{
@@ -96,19 +98,28 @@ html {
 
 
 /* 导航栏 */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 .navbar{
-    position: fixed;      /* 固定在顶部 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    padding: 0 60px  ;
-    background: rgba(255,255,255,0.55); /* 半透明 */
-    backdrop-filter: blur(2px);        /* 毛玻璃 */
-    z-index: 9999;
-    gap: 760px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+  gap: 0;
 }
 
 
@@ -293,9 +304,11 @@ color: inherit;
 }
 
 .zhuangshi1{
-    position: relative;
-    bottom: 900px;
-    left: 974px;
+  position: relative;
+  bottom: 1100px;
+  left: auto;
+  margin-left: auto;
+  display: block;
 }
 
 .syasinn{  
@@ -587,12 +600,13 @@ color: inherit;
     padding-top: 100px;
 }
 .shang1{
-    background: white;
-    width: 1380px;
-    height: 1480px;
-    left: 3%;
-    position: relative;
-    top: 3%;
+  background: white;
+  width: min(92%, 1380px);
+  height: 1480px;
+  margin: 0 auto;
+  position: relative;
+  top: 3%;
+  left: auto;
 }
 .buy-btn {
     width: 400px;
@@ -618,3 +632,6 @@ color: inherit;
     transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(0,0,0,.15);
 }
+
+
+
